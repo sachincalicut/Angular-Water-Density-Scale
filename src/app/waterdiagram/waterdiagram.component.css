@@ -1,0 +1,113 @@
+.bucket-cont{
+   width:150px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #0b578b;
+    padding: 1em;
+    border-radius: 10px;
+    color:white;
+}
+.bucket-cont ul{
+  margin:0;
+  padding: 0;
+}
+.bucket-cont h3{
+  text-align: center;
+}
+.bucket-cont li{
+  display:inline-block;
+  padding: 0px 9px;
+}
+.bucket-cont li p{
+  width: 50px;
+  text-align: center;
+}
+.bucket-arch {
+  width: 150px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: rgb(255 255 255 / 69%);
+    position: absolute;
+    top: 68px;
+    z-index: 99;
+}
+button{
+    border-radius: 50%;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+.btn-warning{
+  background-color: coral;
+}
+.btn-primary{
+  background-color: #3498db;
+}
+.wave-container {
+  position: relative;
+  width: 100%;
+  height: 200px; /* adjust the height to your liking */
+  background-color: rgb(255 255 255 / 69%);
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%; /* initial height */
+  background-color: #3498db;
+  border-radius: 0px;
+  transition: height 0.5s ease-in-out;
+}
+
+.percentage {
+  position: relative;
+  top: 42%;
+ 
+  /* height: 40px; */
+  /* width: 90px; */
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  /* text-align: center; */
+  /* margin: 0 auto;*/
+ 
+}
+
+@keyframes count-animation {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+    content: "0%"; /* initial value */
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 1;
+    content: "100%"; /* final value */
+  }
+}
+
+.wave-container:hover .wave {
+  height: 50%; /* hover state height */
+  transition: height 0.5s ease-in-out;
+}
+
+.wave-container:hover .percentage {
+  animation: none; /* pause animation on hover */
+}
+
+/* animate wave height based on percentage count */
+@keyframes wave-height-animation {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 50%; /* final height */
+  }
+}
+

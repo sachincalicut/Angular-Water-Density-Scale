@@ -1,0 +1,19 @@
+<div class="bucket-cont">
+    <h3>Drink Water</h3>
+    <div class="bucket-arch"></div>
+    <div class="wave-container">
+        <div class="wave" [style.height]="percentage + '%'"></div>
+        <span class="percentage">{{ percentage }}%</span>
+      </div>
+    
+      <ul>
+        <li><button (click)="decrement()" class="btn-warning btn">-</button></li>
+        <li>  <p>{{ count }}ml</p></li>
+        <li> <button (click)="increment()" class="btn btn-primary">+</button></li>
+      </ul>
+    
+  
+   
+</div>
+
+
