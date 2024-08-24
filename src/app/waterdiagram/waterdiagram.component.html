@@ -7,9 +7,9 @@
       </div>
     
       <ul>
-        <li><button (click)="decrement()" class="btn-warning btn">-</button></li>
+        <li><button (click)="decrement()" class="btn-warning btn" [disabled]="count <= 0">-</button></li>
         <li>  <p>{{ count }}ml</p></li>
-        <li> <button (click)="increment()" class="btn btn-primary">+</button></li>
+        <li> <button (click)="increment()" class="btn btn-primary" [disabled]="count >= 1000">+</button></li>
       </ul>
     
   

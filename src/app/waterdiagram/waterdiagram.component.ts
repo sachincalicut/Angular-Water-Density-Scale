@@ -13,9 +13,13 @@ const INC_VALUE = 100;
 export class WaterdiagramComponent implements OnInit {
   count: number = 0;
   percentage: number = 0;
+MAX_VALUE: any;
 
   constructor() {
     this.loadFromLocalStorage();
+  }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
   }
 
   increment() {
@@ -39,30 +43,13 @@ export class WaterdiagramComponent implements OnInit {
   }
 
   loadFromLocalStorage() {
-    const storedCount = localStorage.getItem('count');
-    const storedPercentage = localStorage.getItem('percentage');
-
-    if (storedCount) {
-      this.count = parseInt(storedCount, 10);
-    } else {
-      this.count = 0;
-    }
-
-    if (storedPercentage) {
-      this.percentage = parseFloat(storedPercentage);
-    } else {
-      this.percentage = 0;
-    }
-
+    this.count = parseInt(localStorage.getItem('count') ?? '0', 10);
+    this.percentage = parseFloat(localStorage.getItem('percentage') ?? '0');
     this.calculatePercentage();
   }
 
   saveToLocalStorage() {
     localStorage.setItem('count', this.count.toString());
     localStorage.setItem('percentage', this.percentage.toString());
-  }
-
-  ngOnInit(): void {
-    // No need to throw an error here
   }
 }
