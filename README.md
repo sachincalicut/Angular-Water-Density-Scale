@@ -1,9 +1,15 @@
 # Water Density Scale App 
+
 1.When the page loads the “water-level” urlparams should indicate the initial state of the water level ( If no water level is set assume 0.)
+
 2.The add button should increase the water-level by 100ml each time
+
 3.The remove button should be deactivated if the water-level is 0 ml
+
 4.Once the water level reaches 1000 ml the add button should be deactivated.
+
 5.The change in state should be reflected in the urlparams
+
 
 ![alt text](https://github.com/sachincalicut/water-cal/blob/master/src/assets/Screenshot%202024-08-23%20120725.png?raw=true)
 
